@@ -24,16 +24,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-echo "# Wessal" README.md
-git
-git
-git
-git
-git
-git
-init
-add README .md
-comit -m "first comit"
-branch -M main
-remte add origin https://github.com/AbdelrahmanElkholy41/Wessal.git
-push -u origin main
