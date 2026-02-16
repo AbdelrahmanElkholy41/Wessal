@@ -25,6 +25,7 @@ class OnboardingWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(17.0),
       child: Column(
+
         children: [
           verticalSpace(43.h),
           Center(child: Image.asset(image)),
@@ -32,7 +33,7 @@ class OnboardingWidget extends StatelessWidget {
             title,
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 20.sp,
+              fontSize: 18.sp,
               color: Color(0xff094173),
             ),
           ),

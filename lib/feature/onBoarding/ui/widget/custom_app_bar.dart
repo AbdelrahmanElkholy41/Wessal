@@ -12,30 +12,39 @@ final int index;
       elevation: 0,
       centerTitle: true,
       automaticallyImplyLeading: false,
-      title: Row(
-        children: [          Padding(
-            padding: const EdgeInsets.only(top:40.0),
-            child:   index>0 ?Image.asset('assets/images/arrow.png'): const SizedBox() ,
-          ),
-          Spacer(),
-          Image.asset('assets/images/wessal.png', fit: BoxFit.fill,),
-          Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(top: 40.0),
-            child: TextButton(
-              onPressed: () {},
-              child: Text(
-                'Skip',
-                style: TextStyle(
-                  color: Color(0xff094173),
-                  decoration: TextDecoration.underline,
-                  fontSize: 16,
-                ),
-              ),
+
+      leading: index > 0
+          ? IconButton(
+        icon: Image.asset(
+          'assets/images/arrow.png',
+          height: 32,
+        ),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+      )
+          : null,
+
+      title: Image.asset(
+        'assets/images/wessal.png',
+        height: 32,
+        fit: BoxFit.contain,
+      ),
+
+      actions: [
+        TextButton(
+          onPressed: () {},
+          child: const Text(
+            'Skip',
+            style: TextStyle(
+              color: Color(0xff094173),
+              decoration: TextDecoration.underline,
+              fontSize: 16,
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
+
   }
 }
