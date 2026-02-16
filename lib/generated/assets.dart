@@ -2,19 +2,13 @@
 class Assets {
   Assets._();
 
-  static const String generatedAssets = 'lib/generated/assets.dart';
-  static const String helpersAppRegex = 'lib/core/helpers/app_regex.dart';
-  static const String helpersExtensions = 'lib/core/helpers/extensions.dart';
-  static const String helpersSpacing = 'lib/core/helpers/spacing.dart';
-  static const String libMain = 'lib/main.dart';
-  static const String routingAppRouter = 'lib/core/routing/app_router.dart';
-  static const String routingRoutes = 'lib/core/routing/routes.dart';
-  static const String themingColors = 'lib/core/theming/colors.dart';
-  static const String themingFontWidghtHelper = 'lib/core/theming/font_widght_helper.dart';
-  static const String themingStyles = 'lib/core/theming/styles.dart';
-  static const String widgetOnboarding1 = 'lib/feature/onBoarding/ui/widget/onboarding1.dart';
-  static const String widgetSplashScreennnnn = 'lib/feature/onBoarding/ui/widget/splash_screennnnn.dart';
-  static const String widgetsCoutomTextField = 'lib/core/widgets/coutom_text_field.dart';
-  static const String widgetsCustomMainButton = 'lib/core/widgets/custom_main_button.dart';
+  static const String imagesArrow = 'assets/images/arrow.png';
+  static const String imagesLogo = 'assets/images/logo.png';
+  static const String imagesLogoSplash = 'assets/images/logo_splash.png';
+  static const String imagesPana = 'assets/images/pana.png';
+  static const String imagesRafiki = 'assets/images/rafiki.png';
+  static const String imagesSplash = 'assets/images/splash.png';
+  static const String imagesVoice = 'assets/images/voice.png';
+  static const String imagesWessal = 'assets/images/wessal.png';
 
 }

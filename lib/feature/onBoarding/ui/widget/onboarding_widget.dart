@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wesal/core/helpers/extensions.dart';
 
 import '../../../../core/helpers/spacing.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/widgets/custom_main_button.dart';
 
-class OnboardingWidget extends StatefulWidget {
-  const OnboardingWidget({super.key, required this.image, required this.title, required this.description});
+class OnboardingWidget extends StatelessWidget {
+  const OnboardingWidget({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.description,
+    required this.currentIndex,
+
+  });
   final String image;
   final String title;
   final String description;
+  final int currentIndex;
 
-
-
-  @override
-  State<OnboardingWidget> createState() => _OnboardingWidgetState();
-}
-
-class _OnboardingWidgetState extends State<OnboardingWidget> {
-  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -25,9 +27,9 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
       child: Column(
         children: [
           verticalSpace(43.h),
-          Center(child: Image.asset(widget.image)),
+          Center(child: Image.asset(image)),
           Text(
-            widget.title,
+            title,
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 20.sp,
@@ -36,7 +38,7 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
           ),
           verticalSpace(4.h),
           Text(
-            widget.description,
+            description,
             textAlign: TextAlign.center,
             softWrap: true,
             style: TextStyle(
@@ -53,30 +55,17 @@ class _OnboardingWidgetState extends State<OnboardingWidget> {
                 children: [
                   CircleAvatar(
                     radius: 8,
-                    backgroundColor: currentIndex == index
+                    backgroundColor: index == currentIndex
                         ? Color(0xff094173)
                         : Color(0xffD9D9D9),
                   ),
-                  if (index != 3)  SizedBox(width: 8.w),
+                  if (index != 3) SizedBox(width: 8.w),
                 ],
               );
             }),
           ),
           verticalSpace(30.h),
-          AppTextButton(
-            buttonText: 'Get Started',
-            textStyle: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
-              color: Color(0xffF9FCFF),
-            ),
 
-            onPressed: () {
-              setState(() {
-                currentIndex++;
-              });
-            },
-          ),
         ],
       ),
     );

@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'feature/onBoarding/ui/widget/splash_screennnnn.dart';
+import 'core/routing/app_router.dart';
+import 'core/routing/routes.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
+
+  final AppRouter appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +22,10 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: SplashView(),
+          initialRoute: Routes.splashScreen,
+          onGenerateRoute: appRouter.generateRoute,
         );
       },
-
     );
   }
 }
