@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:wesal/core/helpers/extensions.dart';
 import 'package:wesal/core/widgets/custom_main_button.dart';
 import 'package:wesal/feature/onBoarding/ui/widget/custom_app_bar.dart';
 import 'package:wesal/feature/onBoarding/ui/widget/onboarding_widget.dart';
+
+import '../../../core/routing/routes.dart';
 
 class Onboarding4 extends StatelessWidget {
   const Onboarding4({super.key});
@@ -19,7 +22,9 @@ class Onboarding4 extends StatelessWidget {
             fontWeight: FontWeight.w700,
             color: Color(0xffF9FCFF),
           ),
-          onPressed: () {},
+          onPressed: () {
+            context.pushNamed(Routes.signUpScreen);
+          },
         ),
       ),
 
@@ -28,7 +33,7 @@ class Onboarding4 extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         automaticallyImplyLeading: false,
-        title: CustomAppBar(index: 2),
+        title: CustomAppBar(index: 2, skipAppear: true,),
       ),
       body: OnboardingWidget(
         image: 'assets/images/pana.png',

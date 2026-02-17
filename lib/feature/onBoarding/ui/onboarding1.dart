@@ -35,7 +35,7 @@ class Onboarding1 extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         automaticallyImplyLeading: false,
-        title: CustomAppBar(index: 0),
+        title: CustomAppBar(index: 0, skipAppear: true,),
       ),
       body: OnboardingWidget(
         currentIndex: 0,

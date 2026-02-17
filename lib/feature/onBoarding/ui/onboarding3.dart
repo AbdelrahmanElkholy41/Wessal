@@ -32,7 +32,7 @@ class Onboarding3 extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         automaticallyImplyLeading: false,
-        title: CustomAppBar(index: 2),
+        title: CustomAppBar(index: 2, skipAppear: true,),
       ),
       body: OnboardingWidget(
         image: 'assets/images/amico.png',

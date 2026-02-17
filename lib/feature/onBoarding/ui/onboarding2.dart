@@ -32,7 +32,7 @@ class Onboarding2 extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         automaticallyImplyLeading: false,
-        title: CustomAppBar(index: 1),
+        title: CustomAppBar(index: 1, skipAppear: true,),
       ),
       body: OnboardingWidget(
         currentIndex: 1,
