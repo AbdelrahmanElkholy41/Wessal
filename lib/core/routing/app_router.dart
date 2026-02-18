@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wesal/core/routing/routes.dart';
 import 'package:wesal/feature/auth/ui/login_screen.dart';
+import '../../feature/auth/ui/complete_signup2.dart';
 import '../../feature/auth/ui/complete_sigup.dart';
 import '../../feature/auth/ui/signup_screen.dart';
 import '../../feature/home/ui/home_screen.dart';
@@ -36,6 +37,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const LoginScreen());
       case Routes.completeSigUp:
         return MaterialPageRoute(builder: (_) => const CompleteSigup());
+      case Routes.completeSigUp2:
+        return MaterialPageRoute(builder: (_) => const CompleteSignup2());
 
 
 
