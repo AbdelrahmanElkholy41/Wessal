@@ -7,8 +7,8 @@ class QuickSigns extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200.w,
-      height: 280.h,
+      width: 116.w,
+      height: 200.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(24.r),
         image: const DecorationImage(

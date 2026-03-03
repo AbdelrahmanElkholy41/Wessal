@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wesal/core/helpers/extensions.dart';
+import 'package:wesal/feature/home/ui/widget/app_bar.dart';
 import 'package:wesal/feature/home/ui/widget/quick_sings.dart';
 
 import '../../../core/helpers/spacing.dart';
+import '../../../core/routing/routes.dart';
 
 class HomeContent extends StatelessWidget {
   const HomeContent({super.key});
@@ -13,49 +16,7 @@ class HomeContent extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                color: Color(0xff676BFF),
-                borderRadius: BorderRadius.circular(24),
-              ),
-              child: Column(
-                children: [
-                  verticalSpace(70.h),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 24.0,
-                          bottom: 16,
-                          right: 8,
-                        ),
-                        child: CircleAvatar(
-                          radius: 30,
-                          backgroundImage: AssetImage('assets/images/fadya.png'),
-                        ),
-                      ),
-                      Text(
-                        'Hi, Hend',
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xffF9FCFF),
-                        ),
-                      ),
-                      Spacer(),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.menu,
-                          color: Colors.white,
-                          size: 32,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
+            AppBarr(),
             verticalSpace(16.h),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -93,7 +54,9 @@ class HomeContent extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {  },
+                    onPressed: () {
+                      context.pushNamed(Routes.AllMySigns);
+                    },
                     child: Text(
                       'View All',
                       style: TextStyle(
@@ -108,7 +71,7 @@ class HomeContent extends StatelessWidget {
             ),
             verticalSpace(11.h),
             SizedBox(
-              height: 300.h,
+              height: 180.h,
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: ListView.builder(
@@ -172,6 +135,7 @@ class HomeContent extends StatelessWidget {
     );
   }
 }
+
 
 
 
