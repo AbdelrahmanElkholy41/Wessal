@@ -24,7 +24,7 @@ class CompleteSignup2 extends StatelessWidget {
             color: Color(0xffF9FCFF),
           ),
           onPressed: () {
-
+            context.pushNamed(Routes.homeScreen);
           },
         ),
       ),

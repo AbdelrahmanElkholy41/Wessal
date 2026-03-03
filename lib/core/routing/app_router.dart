@@ -7,6 +7,7 @@ import '../../feature/auth/ui/complete_signup2.dart';
 import '../../feature/auth/ui/complete_sigup.dart';
 import '../../feature/auth/ui/signup_screen.dart';
 import '../../feature/home/ui/home_screen.dart';
+import '../../feature/home/ui/main_screen.dart';
 import '../../feature/onBoarding/ui/onboarding1.dart';
 import '../../feature/onBoarding/ui/onboarding2.dart';
 import '../../feature/onBoarding/ui/onboarding3.dart';
