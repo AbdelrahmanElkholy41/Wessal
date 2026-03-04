@@ -80,7 +80,7 @@ class HomeContent extends StatelessWidget {
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: QuickSigns(),
+                      child: QuickSigns(appear: true,),
                     );
                   },
                 ),

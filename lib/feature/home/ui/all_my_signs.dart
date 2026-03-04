@@ -5,6 +5,7 @@ import 'package:wesal/feature/home/ui/widget/quick_sings.dart';
 
 import '../../../core/helpers/spacing.dart';
 import '../../../core/widgets/custom_main_button.dart';
+import 'camera_recorde.dart';
 
 class AllMySigns extends StatelessWidget {
   const AllMySigns({super.key});
@@ -23,7 +24,12 @@ class AllMySigns extends StatelessWidget {
             color: Color(0xffF9FCFF),
           ),
           onPressed: () {
-
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => const RecordSignScreen(),
+              ),
+            );
           },
         ),
       ),
@@ -79,14 +85,14 @@ class AllMySigns extends StatelessWidget {
               child: GridView.builder(
                 itemCount: 10,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 16,
-                mainAxisSpacing: 16,
-                childAspectRatio: .72,
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 16,
+                  mainAxisSpacing: 16,
+                  childAspectRatio: .72,
 
-              ),
+                ),
                 itemBuilder: (context,index){
-                  return QuickSigns();
+                  return QuickSigns(appear: true,);
                 },
 
               ),

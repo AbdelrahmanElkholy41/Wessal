@@ -11,4 +11,5 @@ class Routes {
   static const String completeSigUp='/completeSigUp';
   static const String completeSigUp2='/completeSigUp2';
   static const String AllMySigns='/AllMySigns';
+  static const String SaveSing='/SaveSing';
 }
