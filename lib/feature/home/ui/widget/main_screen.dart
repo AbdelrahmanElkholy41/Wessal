@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../home_screen.dart';
@@ -39,11 +38,13 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(4, (index) {
               final isSelected = currentIndex == index;
-
-              final icons = [Icons.home,Icons.videocam_sharp, Icons.people_alt_rounded, Icons.menu_book_outlined];
-
-              final labels = ["Home", "Meetings","Search", "Profile"];
-
+              final icons = [
+                Icons.home,
+                Icons.videocam_sharp,
+                Icons.people_alt_rounded,
+                Icons.menu_book_outlined,
+              ];
+              final labels = ["Home", "Meetings", "Community", "Learning"];
               return GestureDetector(
                 onTap: () {
                   setState(() {

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wesal/core/helpers/extensions.dart';
@@ -80,7 +81,7 @@ class HomeContent extends StatelessWidget {
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: QuickSigns(),
+                      child: QuickSigns(appear: true,),
                     );
                   },
                 ),
@@ -89,42 +90,47 @@ class HomeContent extends StatelessWidget {
             verticalSpace(16.h),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20.sp),
-                  border: Border.all(
-                    color: Color(0xff676BFF80),
-                    width: 1.sp,
-                  )
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset('assets/images/signi.png'),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Make Your Sign',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600,
-                                color: Color(0xff01012E),
+              child: GestureDetector(
+                onTap: (){
+                  context.pushNamed(Routes.RecordSign);
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.sp),
+                    border: Border.all(
+                      color: Color(0xff676BFF80),
+                      width: 1.sp,
+                    )
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Image.asset('assets/images/signi.png'),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Make Your Sign',
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color(0xff01012E),
+                                ),
                               ),
-                            ),
-                            Text('Record your hand movement and \n save it as a GIF',style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: Color(0xff7B7B7D),
-                            ),)
-                          ],
+                              AutoSizeText('Record your hand movement and \n save it as a GIF',style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: Color(0xff7B7B7D),
+                              ),)
+                            ],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),

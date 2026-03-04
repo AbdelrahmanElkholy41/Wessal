@@ -74,12 +74,7 @@ class SignupScreen extends StatelessWidget {
                 text: 'Connect With Google',
                 image: 'assets/images/google.png',
               ),
-              verticalSpace(16.h),
-              LoginWith(
-                text: 'Connect With Facebook',
-                image: 'assets/images/facebook.png',
-              ),
-              verticalSpace(26.h),
+              verticalSpace(100.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

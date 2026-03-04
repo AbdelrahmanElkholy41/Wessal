@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wesal/core/helpers/extensions.dart';
+import 'package:wesal/core/routing/routes.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
@@ -35,7 +37,9 @@ class CustomAppBar extends StatelessWidget {
       actions: [
         skipAppear
             ? TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.pushNamed(Routes.signUpScreen);
+                },
                 child: const Text(
                   'Skip',
                   style: TextStyle(

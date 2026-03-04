@@ -7,7 +7,9 @@ import '../../feature/auth/ui/complete_signup2.dart';
 import '../../feature/auth/ui/complete_sigup.dart';
 import '../../feature/auth/ui/signup_screen.dart';
 import '../../feature/home/ui/all_my_signs.dart';
+import '../../feature/home/ui/camera_recorde.dart';
 import '../../feature/home/ui/home_screen.dart';
+import '../../feature/home/ui/save_sign.dart';
 import '../../feature/home/ui/widget/main_screen.dart';
 import '../../feature/onBoarding/ui/onboarding1.dart';
 import '../../feature/onBoarding/ui/onboarding2.dart';
@@ -43,7 +45,10 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const CompleteSignup2());
       case Routes.AllMySigns:
         return MaterialPageRoute(builder: (_) => const AllMySigns());
-
+      case Routes.SaveSing:
+        return MaterialPageRoute(builder: (_) => SaveSign( ));
+      case Routes.RecordSign:
+        return MaterialPageRoute(builder: (_) => const RecordSignScreen());
 
       default:
         return MaterialPageRoute(

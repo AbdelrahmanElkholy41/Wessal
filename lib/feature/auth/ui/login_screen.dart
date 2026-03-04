@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
             color: Color(0xffF9FCFF),
           ),
           onPressed: () {
-
+            context.pushNamed(Routes.homeScreen);
           },
         ),
       ),
@@ -86,16 +86,13 @@ class LoginScreen extends StatelessWidget {
                 image: 'assets/images/google.png',
               ),
               verticalSpace(16.h),
-              LoginWith(
-                text: 'Connect With Facebook',
-                image: 'assets/images/facebook.png',
-              ),
+
               verticalSpace(26.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Already have an Account?',
+                    'Don’t have an account?',
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 17,
@@ -104,10 +101,10 @@ class LoginScreen extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      context.pushNamed(Routes.loginScreen);
+                      context.pushNamed(Routes.signUpScreen);
                     },
                     child: Text(
-                      'Login',
+                      'Sign Up',
                       style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.w400,

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class QuickSigns extends StatelessWidget {
-  const QuickSigns({super.key});
+  const QuickSigns({super.key, required this.appear});
+  final bool appear;
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +22,15 @@ class QuickSigns extends StatelessWidget {
           Positioned(
             top: 12.h,
             left: 12.w,
-            child: _circleIcon(Icons.star_border_purple500_sharp),
+            child:appear ? _circleIcon(Icons.star_border_purple500_sharp): SizedBox(),
           ),
+
           Positioned(
             top: 12.h,
             right: 12.w,
-            child: _circleIcon(Icons.more_vert),
+            child: appear
+                ? _circleIcon(Icons.more_vert)
+                : _circleIcon(Icons.star_border_purple500_sharp),
           ),
           Center(child: Image.asset('assets/images/Gif.png', width: 90.w)),
           Positioned(
