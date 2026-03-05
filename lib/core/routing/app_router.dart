@@ -50,6 +50,7 @@ class AppRouter {
       case Routes.RecordSign:
         return MaterialPageRoute(builder: (_) => const RecordSignScreen());
 
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(
