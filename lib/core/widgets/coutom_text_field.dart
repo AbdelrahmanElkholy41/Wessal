@@ -16,6 +16,8 @@ class CustomTextField extends StatelessWidget {
   final Color? backgroundColor;
   final TextEditingController? controller;
   final Function(String?) validator;
+  final Icon? prefixIcon;
+
   const CustomTextField({
     super.key,
     this.contentPadding,
@@ -28,6 +30,7 @@ class CustomTextField extends StatelessWidget {
     this.suffixIcon,
     this.backgroundColor,
     this.controller,
+    this.prefixIcon,
     required this.validator,
   });
 
@@ -66,6 +69,7 @@ class CustomTextField extends StatelessWidget {
           borderSide: const BorderSide(color: Colors.red, width: 1.3),
           borderRadius: BorderRadius.circular(16.0),
         ),
+        prefixIcon: prefixIcon,
         hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,

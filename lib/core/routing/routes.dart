@@ -13,5 +13,8 @@ class Routes {
   static const String AllMySigns='/AllMySigns';
   static const String SaveSing='/SaveSing';
   static const String RecordSign='/RecordSign';
+  static const String LearnScreen='/LearnScreen';
+
+  
 
 }

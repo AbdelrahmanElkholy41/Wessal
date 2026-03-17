@@ -1,5 +1,3 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wesal/core/routing/routes.dart';
 import 'package:wesal/feature/auth/ui/login_screen.dart';
@@ -8,9 +6,9 @@ import '../../feature/auth/ui/complete_sigup.dart';
 import '../../feature/auth/ui/signup_screen.dart';
 import '../../feature/home/ui/all_my_signs.dart';
 import '../../feature/home/ui/camera_recorde.dart';
-import '../../feature/home/ui/home_screen.dart';
 import '../../feature/home/ui/save_sign.dart';
 import '../../feature/home/ui/widget/main_screen.dart';
+import '../../feature/learn/ui/learn_screen.dart';
 import '../../feature/onBoarding/ui/onboarding1.dart';
 import '../../feature/onBoarding/ui/onboarding2.dart';
 import '../../feature/onBoarding/ui/onboarding3.dart';
@@ -49,6 +47,9 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => SaveSign( ));
       case Routes.RecordSign:
         return MaterialPageRoute(builder: (_) => const RecordSignScreen());
+      case Routes.LearnScreen:
+        return MaterialPageRoute(builder: (_) => const LearnScreen());
+
 
 
       default:

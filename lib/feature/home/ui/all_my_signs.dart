@@ -11,7 +11,6 @@ import 'camera_recorde.dart';
 
 class AllMySigns extends StatelessWidget {
   const AllMySigns({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

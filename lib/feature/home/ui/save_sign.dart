@@ -23,9 +23,6 @@ class SaveSign extends StatelessWidget {
             color: Color(0xffF9FCFF),
           ),
           onPressed: () {
-            (
-
-            );
           },
         ),
       ),
@@ -103,7 +100,8 @@ class SaveSign extends StatelessWidget {
                       
                 ),
                 hintText: '#e.g. Hello, Thank You',
-                validator: (vale) {},
+                validator: (vale) {
+                },
               ),
             ),
           ],
