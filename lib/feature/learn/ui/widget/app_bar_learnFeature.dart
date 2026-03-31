@@ -7,7 +7,10 @@ import '../../../../core/routing/routes.dart';
 import '../../../../core/widgets/coutom_text_field.dart';
 
 class AppBarLearn extends StatelessWidget {
-  const AppBarLearn({super.key});
+  const AppBarLearn({super.key, required this.starApp, required this.title, required this.dec});
+  final bool starApp;
+  final String title;
+  final String dec;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +33,7 @@ class AppBarLearn extends StatelessWidget {
               Image.asset('assets/images/arrow1.png'),
               horizontalSpace(16.w),
               Text(
-                "Welcome Back!",
+                title,
                 style: TextStyle(
                   fontSize: 22,
                   color: Colors.white,
@@ -38,6 +41,7 @@ class AppBarLearn extends StatelessWidget {
                 ),
               ),
               Spacer(),
+              starApp ?
               IconButton(
                 onPressed: () {
                   Navigator.of(context, rootNavigator: true).pushNamed(
@@ -52,13 +56,13 @@ class AppBarLearn extends StatelessWidget {
                   Icons.star_border_purple500_outlined,
                   color: Colors.white,
                 ),
-              ),
+              ): SizedBox(),
             ],
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 55.0),
             child: Text(
-              "Ready to learn today?",
+              dec,
               style: TextStyle(color: Colors.white70),
             ),
           ),

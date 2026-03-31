@@ -8,6 +8,7 @@ import '../../feature/home/ui/all_my_signs.dart';
 import '../../feature/home/ui/camera_recorde.dart';
 import '../../feature/home/ui/save_sign.dart';
 import '../../feature/home/ui/widget/main_screen.dart';
+import '../../feature/learn/ui/dictionary_screen.dart';
 import '../../feature/learn/ui/learn_screen.dart';
 import '../../feature/onBoarding/ui/onboarding1.dart';
 import '../../feature/onBoarding/ui/onboarding2.dart';
@@ -53,6 +54,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const RecordSignScreen());
       case Routes.LearnScreen:
         return MaterialPageRoute(builder: (_) => const LearnScreen());
+        case Routes.DictionaryScreen:
+        return MaterialPageRoute(builder: (_) => const ASLDictionaryScreen());
 
 
 

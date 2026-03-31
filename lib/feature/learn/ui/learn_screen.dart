@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wesal/core/helpers/extensions.dart';
 import 'package:wesal/core/helpers/spacing.dart';
 import 'package:wesal/feature/learn/ui/widget/app_bar_learnFeature.dart';
+
+import '../../../core/routing/routes.dart';
 
 class LearnScreen extends StatelessWidget {
   const LearnScreen({super.key});
@@ -14,7 +17,7 @@ class LearnScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            AppBarLearn(),
+            AppBarLearn(starApp: true, title: 'Welcome Back!', dec: 'Ready to learn today?',),
             verticalSpace(20.h),
             const Text(
               "Your Progress",
@@ -58,38 +61,44 @@ class LearnScreen extends StatelessWidget {
 
             verticalSpace(20.h),
 
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 20),
-              padding: const EdgeInsets.all(15),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: Row(
-                children: [
-                  Image.asset('assets/images/book.png'),
-                  const SizedBox(width: 15),
+            GestureDetector(
+              onTap: () {
+                Navigator.of(context, rootNavigator: true).pushNamed(
+                    Routes.DictionaryScreen);
+              },
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                child: Row(
+                  children: [
+                    Image.asset('assets/images/book.png'),
+                    const SizedBox(width: 15),
 
-                  const Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "ASL Dictionary",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
+                    const Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "ASL Dictionary",
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
 
-                        Text(
-                          "Your guide to ASL, with signs shown through videos and examples",
-                          style: TextStyle(fontSize: 12),
-                        ),
-                      ],
+                          Text(
+                            "Your guide to ASL, with signs shown through videos and examples",
+                            style: TextStyle(fontSize: 12),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
 

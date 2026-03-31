@@ -14,6 +14,7 @@ class Routes {
   static const String SaveSing='/SaveSing';
   static const String RecordSign='/RecordSign';
   static const String LearnScreen='/LearnScreen';
+  static const String DictionaryScreen='/DictionaryScreen';
 
   
 
