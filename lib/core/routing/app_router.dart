@@ -8,8 +8,10 @@ import '../../feature/home/ui/all_my_signs.dart';
 import '../../feature/home/ui/camera_recorde.dart';
 import '../../feature/home/ui/save_sign.dart';
 import '../../feature/home/ui/widget/main_screen.dart';
+import '../../feature/learn/logic/dic_modal.dart';
 import '../../feature/learn/ui/dictionary_screen.dart';
 import '../../feature/learn/ui/learn_screen.dart';
+import '../../feature/learn/ui/sign_details_screen.dart';
 import '../../feature/onBoarding/ui/onboarding1.dart';
 import '../../feature/onBoarding/ui/onboarding2.dart';
 import '../../feature/onBoarding/ui/onboarding3.dart';
@@ -19,7 +21,6 @@ import '../../feature/onBoarding/ui/splash_screennnnn.dart';
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
     //this arguments to be passed in any screen like this ( arguments as ClassName )
-    final args = settings.arguments as Map<String, dynamic>?;
     switch (settings.name) {
       case Routes.splashScreen:
         return MaterialPageRoute(builder: (_) => const SplashView());
@@ -40,8 +41,10 @@ class AppRouter {
       case Routes.completeSigUp:
         return MaterialPageRoute(builder: (_) => const CompleteSigup());
       case Routes.completeSigUp2:
+
         return MaterialPageRoute(builder: (_) => const CompleteSignup2());
       case Routes.AllMySigns:
+        final args = settings.arguments as Map<String, dynamic>?;
         return MaterialPageRoute(
           builder: (_) => AllMySigns(
             name: args?['name'],
@@ -56,6 +59,10 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const LearnScreen());
         case Routes.DictionaryScreen:
         return MaterialPageRoute(builder: (_) => const ASLDictionaryScreen());
+      case Routes.SignDetailsScreen:
+        final sign = settings.arguments as SignModel;
+
+        return MaterialPageRoute(builder: (_) => SignDetailsScreen(sign:sign));
 
 
 

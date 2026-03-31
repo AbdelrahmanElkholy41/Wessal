@@ -6,6 +6,7 @@ import 'package:wesal/feature/home/ui/widget/quick_sings.dart';
 
 import '../../../core/helpers/spacing.dart';
 import '../../../core/routing/routes.dart';
+import '../../../core/widgets/appBarFoavirt.dart';
 import '../../../core/widgets/custom_main_button.dart';
 import 'camera_recorde.dart';
 
@@ -33,54 +34,7 @@ class AllMySigns extends StatelessWidget {
       ):SizedBox(),
       body: Column(
         children: [
-          Container(
-            padding: EdgeInsets.all(24.r),
-            decoration: BoxDecoration(
-              color: Color(0xff676BFF),
-              borderRadius: BorderRadius.circular(24),
-            ),
-            child: Column(
-              children: [
-                verticalSpace(70.h),
-                Column(
-                  children: [
-                    Row(
-                      children: [
-                        verticalSpace(50.h),
-                        GestureDetector(
-                            onTap: (){
-                              Navigator.pop(context);
-                            },
-                            child: Image.asset('assets/images/arrow1.png')),
-                        horizontalSpace(16.w),
-                        Text(
-                          name ?? 'My Signs',
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    Align(
-                      alignment: Alignment.bottomRight,
-                      child: Text(
-
-                        '6 saved GIFs',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 14,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+          AppBarFavoritSign(name: name, appear: true,),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
@@ -106,3 +60,4 @@ class AllMySigns extends StatelessWidget {
     );
   }
 }
+

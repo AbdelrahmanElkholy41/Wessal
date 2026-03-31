@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../core/routing/routes.dart';
 import '../../logic/dic_modal.dart';
 
 class SignCard extends StatelessWidget {
@@ -66,7 +67,7 @@ class SignCard extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 8),
-                  _buildButtons(),
+                  _buildButtons(context),
                 ],
               ),
             ),
@@ -182,7 +183,7 @@ class SignCard extends StatelessWidget {
     );
   }
 
-  Widget _buildButtons() {
+  Widget _buildButtons(BuildContext context) {
     return Row(
       children: [
         Expanded(
@@ -222,10 +223,17 @@ class SignCard extends StatelessWidget {
             shape: BoxShape.circle,
             border: Border.all(color: const Color(0xFFCCCCCC), width: 1.5),
           ),
-          child: const Icon(
-            Icons.info_outline_rounded,
-            size: 14,
-            color: Color(0xFF888888),
+          child: IconButton(
+             onPressed: (){
+               Navigator.of(context, rootNavigator: true).pushNamed(
+                 Routes.SignDetailsScreen,
+               arguments: sign,);
+             },
+             icon: Icon(
+              Icons.info_outline_rounded,
+              size: 14,
+              color: Color(0xFF888888),
+            ),
           ),
         ),
       ],

@@ -15,6 +15,8 @@ class Routes {
   static const String RecordSign='/RecordSign';
   static const String LearnScreen='/LearnScreen';
   static const String DictionaryScreen='/DictionaryScreen';
+  static const String SignDetailsScreen='/SignDetailsScreen';
+
 
   
 
