@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wesal/core/helpers/extensions.dart';
 
 import '../../../../core/helpers/spacing.dart';
+import '../../../../core/routing/routes.dart';
 import '../../../../core/widgets/coutom_text_field.dart';
 
 class AppBarLearn extends StatelessWidget {
@@ -37,7 +39,15 @@ class AppBarLearn extends StatelessWidget {
               ),
               Spacer(),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context, rootNavigator: true).pushNamed(
+                    Routes.AllMySigns,
+                    arguments: {
+                      'name': 'My Favorites',
+                      'appear': false,
+                    },
+                  );
+                },
                 icon: Icon(
                   Icons.star_border_purple500_outlined,
                   color: Colors.white,

@@ -18,8 +18,7 @@ import '../../feature/onBoarding/ui/splash_screennnnn.dart';
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
     //this arguments to be passed in any screen like this ( arguments as ClassName )
-    final arguments = settings.arguments;
-
+    final args = settings.arguments as Map<String, dynamic>?;
     switch (settings.name) {
       case Routes.splashScreen:
         return MaterialPageRoute(builder: (_) => const SplashView());
@@ -42,7 +41,12 @@ class AppRouter {
       case Routes.completeSigUp2:
         return MaterialPageRoute(builder: (_) => const CompleteSignup2());
       case Routes.AllMySigns:
-        return MaterialPageRoute(builder: (_) => const AllMySigns());
+        return MaterialPageRoute(
+          builder: (_) => AllMySigns(
+            name: args?['name'],
+            appear: args?['appear'] ?? true,
+          ),
+        );
       case Routes.SaveSing:
         return MaterialPageRoute(builder: (_) => SaveSign( ));
       case Routes.RecordSign:

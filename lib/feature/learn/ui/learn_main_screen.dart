@@ -28,12 +28,16 @@ class _LearningMainScreenState extends State<LearningMainScreen> {
             offstage: currentIndex != index,
             child: Navigator(
               key: navigatorKeys[index],
-              onGenerateRoute: (_) {
-                return MaterialPageRoute(
-                  builder: (_) => _getRootScreen(index),
-                );
-              },
-            ),
+              initialRoute: '/',
+              onGenerateRoute: (settings) {
+            if (settings.name == '/') {
+              return MaterialPageRoute(
+                builder: (_) => _getRootScreen(index),
+              );
+            }
+            return null;
+          },
+          )
           );
         }),
       ),
@@ -133,7 +137,6 @@ class _LearningMainScreenState extends State<LearningMainScreen> {
   }
 }
 
-/// Tabs مؤقتة
 class SignsScreen extends StatelessWidget {
   const SignsScreen({super.key});
 
