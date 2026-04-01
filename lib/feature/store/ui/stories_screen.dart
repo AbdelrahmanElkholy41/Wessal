@@ -84,6 +84,7 @@ class _StoriesAppBar extends StatelessWidget {
               Text(
                 'Pick a story to read and learn!',
                 style: TextStyle(
+
                   color: Color(0xFFCCCEFA),
                   fontSize: 14,
                   fontWeight: FontWeight.w500,
