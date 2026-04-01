@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../logic/dic_modal.dart';
+import '../../data/dic_modal.dart';
+
 
 // ─── Header Widget ─────────────────────────────────────────
 class ASLHeader extends StatelessWidget {

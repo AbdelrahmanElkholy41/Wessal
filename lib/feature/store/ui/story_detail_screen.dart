@@ -1,11 +1,13 @@
 // lib/screens/story_detail_screen.dart
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:wesal/core/helpers/spacing.dart';
 import 'package:wesal/feature/store/ui/widget/sign_word_card.dart';
 import 'package:wesal/feature/store/ui/widget/story_image_card.dart';
 import '../../../core/theming/app_theme.dart';
-import '../../learn/logic/story_modal.dart';
-import '../logic/models/story_page.dart';
+import '../data/models/story.dart';
+import '../data/models/story_page.dart';
 
 class StoryDetailScreen extends StatefulWidget {
   final Story story;
@@ -57,7 +59,7 @@ class _StoryDetailScreenState extends State<StoryDetailScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 20),
+                  verticalSpace(24.h),
                   StoryImageCard(page: page),
                   const SizedBox(height: 24),
                   const Padding(
@@ -128,13 +130,12 @@ class _DetailAppBar extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(16, 12, 16, 20),
           child: Column(
             children: [
+              verticalSpace(80.h),
               Row(
                 children: [
                   GestureDetector(
                     onTap: () => Navigator.of(context).pop(),
                     child: Container(
-                      width: 40,
-                      height: 40,
                       decoration: BoxDecoration(
                         color: AppColors.white.withOpacity(0.2),
                         shape: BoxShape.circle,
@@ -144,6 +145,7 @@ class _DetailAppBar extends StatelessWidget {
                         ),
                       ),
                       child: const Icon(
+
                         Icons.chevron_left_rounded,
                         color: AppColors.white,
                         size: 26,
@@ -265,20 +267,20 @@ class _NavigationBar extends StatelessWidget {
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 13),
               decoration: BoxDecoration(
-                color: isLast ? AppColors.cardBg : AppColors.primary,
+                color: AppColors.primary,
                 borderRadius: BorderRadius.circular(50),
               ),
               child: Row(
                 children: [
-                  Text('Next',
+                  Text(isLast ?'Finish':'Next',
                       style: TextStyle(
-                        color: isLast ? AppColors.textGrey : AppColors.white,
+                        color: AppColors.white,
                         fontSize: 15,
                         fontWeight: FontWeight.w700,
                       )),
                   const SizedBox(width: 4),
                   Icon(Icons.chevron_right_rounded,
-                      color: isLast ? AppColors.textGrey : AppColors.white, size: 22),
+                      color: AppColors.white, size: 22),
                 ],
               ),
             ),

@@ -5,7 +5,7 @@ import 'package:wesal/feature/store/ui/widget/story_card.dart';
 
 import '../../../core/routing/routes.dart';
 import '../../../core/theming/app_theme.dart';
-import '../../learn/logic/story_modal.dart';
+import '../data/models/story.dart';
 
 class StoriesScreen extends StatelessWidget {
   const StoriesScreen({super.key});
@@ -80,6 +80,7 @@ class _StoriesAppBar extends StatelessWidget {
                   letterSpacing: -0.5,
                 ),
               ),
+
               SizedBox(height: 4),
               Text(
                 'Pick a story to read and learn!',

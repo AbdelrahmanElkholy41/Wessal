@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:wesal/core/helpers/spacing.dart';
 
 import '../../../core/widgets/appBarFoavirt.dart';
-import '../logic/dic_modal.dart';
+import '../data/dic_modal.dart';
 
 class SignDetailsScreen extends StatelessWidget {
   final SignModel sign;

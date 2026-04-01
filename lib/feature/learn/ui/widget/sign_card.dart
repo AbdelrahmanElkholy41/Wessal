@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../../core/routing/routes.dart';
-import '../../logic/dic_modal.dart';
+import '../../data/dic_modal.dart';
 
 class SignCard extends StatelessWidget {
   final SignModel sign;

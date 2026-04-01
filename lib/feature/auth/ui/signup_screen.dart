@@ -38,43 +38,12 @@ class SignupScreen extends StatelessWidget {
                   color: Color(0xff676BFF),
                 ),
               ),
-              verticalSpace(24.h),
-              CustomTextField(
-                hintText: 'Enter your phone number',
-                validator: (value) {},
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide(color: Color(0xff676BFF)),
-                ),
-              ),
-              verticalSpace(16.h),
-              AppTextButton(
-                backgroundColor: Color(0xff676BFF),
-                buttonText: 'Get OTP',
-                textStyle: TextStyle(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 20.sp,
-                  color: Color(0xffF9FCFF),
-                ),
-                onPressed: () {
-                  context.pushNamed(Routes.completeSigUp);
-                },
-              ),
-              verticalSpace(16.h),
-              Text(
-                'Or',
-                style: TextStyle(
-                  fontSize: 24.sp,
-                  fontWeight: FontWeight.w400,
-                  color: Color(0xff676BFF),
-                ),
-              ),
-              verticalSpace(16.h),
+              verticalSpace(100.h),
               LoginWith(
                 text: 'Connect With Google',
                 image: 'assets/images/google.png',
               ),
-              verticalSpace(100.h),
+              verticalSpace(200.h),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

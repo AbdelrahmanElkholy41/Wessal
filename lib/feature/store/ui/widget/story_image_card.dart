@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import '../../../../core/theming/app_theme.dart';
-import '../../logic/models/story_page.dart';
+import '../../data/models/story_page.dart';
 
 class StoryImageCard extends StatelessWidget {
   final StoryPage page;
@@ -42,10 +42,7 @@ class StoryImageCard extends StatelessWidget {
                 ),
               ),
               child: Center(
-                child: Text(
-                  page.imageEmoji,
-                  style: const TextStyle(fontSize: 100),
-                ),
+                child: Image.asset(page.imageEmoji)
               ),
             ),
             // Page counter badge

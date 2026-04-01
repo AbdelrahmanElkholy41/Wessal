@@ -8,8 +8,7 @@ import '../../feature/home/ui/all_my_signs.dart';
 import '../../feature/home/ui/camera_recorde.dart';
 import '../../feature/home/ui/save_sign.dart';
 import '../../feature/home/ui/widget/main_screen.dart';
-import '../../feature/learn/logic/dic_modal.dart';
-import '../../feature/learn/logic/story_modal.dart';
+import '../../feature/learn/data/dic_modal.dart';
 import '../../feature/learn/ui/dictionary_screen.dart';
 import '../../feature/learn/ui/learn_screen.dart';
 import '../../feature/learn/ui/sign_details_screen.dart';
@@ -18,6 +17,7 @@ import '../../feature/onBoarding/ui/onboarding2.dart';
 import '../../feature/onBoarding/ui/onboarding3.dart';
 import '../../feature/onBoarding/ui/onboarding4.dart';
 import '../../feature/onBoarding/ui/splash_screennnnn.dart';
+import '../../feature/store/data/models/story.dart';
 import '../../feature/store/ui/story_detail_screen.dart';
 
 class AppRouter {

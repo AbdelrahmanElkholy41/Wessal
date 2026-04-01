@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import '../../../../core/theming/app_theme.dart';
-import '../../logic/models/story_page.dart';
+import '../../data/models/story_page.dart';
 
 class SignWordCard extends StatelessWidget {
   final SignWord sign;
@@ -43,10 +43,7 @@ class SignWordCard extends StatelessWidget {
                 ),
               ),
               child: Center(
-                child: Text(
-                  sign.signEmoji,
-                  style: const TextStyle(fontSize: 52),
-                ),
+                child:Image.asset(sign.signEmoji)
               ),
             ),
             // Star icon top-left

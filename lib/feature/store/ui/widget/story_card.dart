@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import '../../../../core/theming/app_theme.dart';
-import '../../../learn/logic/story_modal.dart';
+import '../../data/models/story.dart';
 import '../story_detail_screen.dart';
 
 class StoryCard extends StatelessWidget {
@@ -38,7 +38,7 @@ class StoryCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _StoryImage(emoji: story.emoji),
+            _StoryImage(image: story.image),
             const SizedBox(height: 10),
             Text(
               story.title,
@@ -68,8 +68,8 @@ class StoryCard extends StatelessWidget {
 }
 
 class _StoryImage extends StatelessWidget {
-  final String emoji;
-  const _StoryImage({required this.emoji});
+  final String image;
+  const _StoryImage({required this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -88,10 +88,7 @@ class _StoryImage extends StatelessWidget {
         ],
       ),
       child: Center(
-        child: Text(
-          emoji,
-          style: const TextStyle(fontSize: 36),
-        ),
+        child:Image.asset(image)
       ),
     );
   }

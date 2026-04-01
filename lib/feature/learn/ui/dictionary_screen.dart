@@ -3,7 +3,8 @@ import 'package:wesal/feature/learn/ui/widget/app_bar_learnFeature.dart';
 import 'package:wesal/feature/learn/ui/widget/asl_widget.dart';
 import 'package:wesal/feature/learn/ui/widget/sign_card.dart';
 
-import '../logic/dic_modal.dart';
+import '../data/dic_modal.dart';
+
 
 class ASLDictionaryScreen extends StatefulWidget {
   const ASLDictionaryScreen({super.key});
