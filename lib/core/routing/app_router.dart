@@ -9,6 +9,7 @@ import '../../feature/home/ui/camera_recorde.dart';
 import '../../feature/home/ui/save_sign.dart';
 import '../../feature/home/ui/widget/main_screen.dart';
 import '../../feature/learn/logic/dic_modal.dart';
+import '../../feature/learn/logic/story_modal.dart';
 import '../../feature/learn/ui/dictionary_screen.dart';
 import '../../feature/learn/ui/learn_screen.dart';
 import '../../feature/learn/ui/sign_details_screen.dart';
@@ -17,6 +18,7 @@ import '../../feature/onBoarding/ui/onboarding2.dart';
 import '../../feature/onBoarding/ui/onboarding3.dart';
 import '../../feature/onBoarding/ui/onboarding4.dart';
 import '../../feature/onBoarding/ui/splash_screennnnn.dart';
+import '../../feature/store/ui/story_detail_screen.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
@@ -63,6 +65,10 @@ class AppRouter {
         final sign = settings.arguments as SignModel;
 
         return MaterialPageRoute(builder: (_) => SignDetailsScreen(sign:sign));
+        case Routes.storyDetails:
+          final story = settings.arguments as Story;
+
+          return MaterialPageRoute(builder: (_) => StoryDetailScreen(story:story ,));
 
 
 
@@ -78,3 +84,4 @@ class AppRouter {
 
   }
 }
+

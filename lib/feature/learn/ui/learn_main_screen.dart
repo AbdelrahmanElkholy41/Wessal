@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../store/ui/stories_screen.dart';
 import 'learn_screen.dart';
 
 class LearningMainScreen extends StatefulWidget {
@@ -145,18 +146,6 @@ class SignsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Signs")),
       body: const Center(child: Text("Signs Screen")),
-    );
-  }
-}
-
-class StoriesScreen extends StatelessWidget {
-  const StoriesScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Stories")),
-      body: const Center(child: Text("Stories Screen")),
     );
   }
 }

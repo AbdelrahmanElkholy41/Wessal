@@ -16,6 +16,7 @@ class Routes {
   static const String LearnScreen='/LearnScreen';
   static const String DictionaryScreen='/DictionaryScreen';
   static const String SignDetailsScreen='/SignDetailsScreen';
+  static const String storyDetails='/storyDetails';
 
 
   
