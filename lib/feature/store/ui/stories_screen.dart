@@ -80,6 +80,7 @@ class _StoriesAppBar extends StatelessWidget {
                   letterSpacing: -0.5,
                 ),
               ),
+
               SizedBox(height: 4),
               Text(
                 'Pick a story to read and learn!',
