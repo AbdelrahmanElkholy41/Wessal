@@ -1,4 +1,4 @@
-// lib/widgets/story_image_card.dart
+
 
 import 'package:flutter/material.dart';
 import '../../../../core/theming/app_theme.dart';
@@ -41,8 +41,10 @@ class StoryImageCard extends StatelessWidget {
                   ],
                 ),
               ),
-              child: Center(
-                child: Image.asset(page.imageEmoji)
+              child: Image.asset(page.imageEmoji,
+                fit: BoxFit.cover,
+
+
               ),
             ),
             // Page counter badge
@@ -66,6 +68,7 @@ class StoryImageCard extends StatelessWidget {
               ),
             ),
             // Play button overlay
+
             Center(
               child: Container(
                 width: 52,

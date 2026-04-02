@@ -8,6 +8,7 @@ import 'package:wesal/feature/store/ui/widget/story_image_card.dart';
 import '../../../core/theming/app_theme.dart';
 import '../data/models/story.dart';
 import '../data/models/story_page.dart';
+import 'feedback_screen.dart';
 
 class StoryDetailScreen extends StatefulWidget {
   final Story story;
@@ -31,6 +32,13 @@ class _StoryDetailScreenState extends State<StoryDetailScreen> {
   void _goNext() {
     if (_currentPage < _pages.length - 1) {
       setState(() => _currentPage++);
+    } else {
+      // لما نوصل آخر صفحة، افتح FeedbackScreen
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (_) => FeedbackScreen(storyTitle: widget.story.title),
+        ),
+      );
     }
   }
 
@@ -263,7 +271,7 @@ class _NavigationBar extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: isLast ? null : onNext,
+            onTap: onNext,
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 13),
               decoration: BoxDecoration(
