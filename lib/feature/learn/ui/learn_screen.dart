@@ -156,7 +156,6 @@ Widget statCard({
       children: [
         Image.asset(image),
         verticalSpace(10.h),
-
         Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
         verticalSpace(10.h),
         Text(value),
