@@ -31,6 +31,8 @@ class _ASLDictionaryScreenState extends State<ASLDictionaryScreen> {
     }).toList();
   }
 
+
+
   void _toggleLearned(int id) {
     setState(() {
       if (_learnedIds.contains(id)) {

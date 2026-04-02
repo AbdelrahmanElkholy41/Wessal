@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../signs/ui/signs_screen.dart';
 import '../../store/ui/stories_screen.dart';
 import 'learn_screen.dart';
 
@@ -66,7 +67,7 @@ class _LearningMainScreenState extends State<LearningMainScreen> {
     final icons = [
       Icons.home,
       Icons.pan_tool,
-      Icons.menu_book,
+      Icons.chrome_reader_mode,
       Icons.sports_esports,
     ];
 
@@ -138,17 +139,7 @@ class _LearningMainScreenState extends State<LearningMainScreen> {
   }
 }
 
-class SignsScreen extends StatelessWidget {
-  const SignsScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Signs")),
-      body: const Center(child: Text("Signs Screen")),
-    );
-  }
-}
 
 class GamesScreen extends StatelessWidget {
   const GamesScreen({super.key});

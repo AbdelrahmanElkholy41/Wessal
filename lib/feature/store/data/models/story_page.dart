@@ -38,14 +38,14 @@ class StoryPageData {
         imageEmoji: 'assets/images/cat.png',
         signs: [
           SignWord(word: 'Cat', signEmoji: 'assets/images/cat.png', description: 'Pinch fingers near cheek'),
-          SignWord(word: 'Happy', signEmoji: 'assets/s/cat.png', description: 'Brush chest upward'),
+          SignWord(word: 'Happy', signEmoji: 'assets/images/cat.png', description: 'Brush chest upward'),
         ],
       ),
       StoryPage(
         pageNumber: 2,
         totalPages: 3,
         caption: 'Whiskers loves to play with yarn.',
-        imageEmoji: 'assets/image/cat.png',
+        imageEmoji: 'assets/images/cat.png',
         signs: [
           SignWord(word: 'Play', signEmoji: 'assets/images/cat.png', description: 'Wiggle both hands'),
           SignWord(word: 'Love', signEmoji: 'assets/images/cat.png', description: 'Cross arms on chest'),
@@ -71,6 +71,26 @@ class StoryPageData {
         signs: [
           SignWord(word: 'Teacher', signEmoji: 'assets/images/cat.png', description: 'Flat hands from temples outward'),
           SignWord(word: 'Great', signEmoji: 'assets/images/cat.png', description: 'Thumbs up with both hands'),
+        ],
+      ),
+      StoryPage(
+        pageNumber: 2,
+        totalPages: 3,
+        caption: 'Whiskers loves to play with yarn.',
+        imageEmoji: 'assets/images/cat.png',
+        signs: [
+          SignWord(word: 'Play', signEmoji: 'assets/images/cat.png', description: 'Wiggle both hands'),
+          SignWord(word: 'Love', signEmoji: 'assets/images/cat.png', description: 'Cross arms on chest'),
+        ],
+      ),
+      StoryPage(
+        pageNumber: 3,
+        totalPages: 3,
+        caption: 'At night, Whiskers sleeps peacefully.',
+        imageEmoji: 'assets/images/cat.png',
+        signs: [
+          SignWord(word: 'Sleep', signEmoji: 'assets/images/cat.png', description: 'Tilt head on hand'),
+          SignWord(word: 'Night', signEmoji: 'assets/images/cat.png', description: 'Arc hand downward'),
         ],
       ),
 

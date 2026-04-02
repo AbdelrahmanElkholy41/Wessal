@@ -7,10 +7,17 @@ import '../../../../core/routing/routes.dart';
 import '../../../../core/widgets/coutom_text_field.dart';
 
 class AppBarLearn extends StatelessWidget {
-  const AppBarLearn({super.key, required this.starApp, required this.title, required this.dec});
+  const AppBarLearn({
+    super.key,
+    required this.starApp,
+    required this.title,
+    required this.dec,
+     this.controller,
+  });
   final bool starApp;
   final String title;
   final String dec;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
@@ -41,34 +48,30 @@ class AppBarLearn extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              starApp ?
-              IconButton(
-                onPressed: () {
-                  Navigator.of(context, rootNavigator: true).pushNamed(
-                    Routes.AllMySigns,
-                    arguments: {
-                      'name': 'My Favorites',
-                      'appear': false,
-                    },
-                  );
-                },
-                icon: Icon(
-                  Icons.star_border_purple500_outlined,
-                  color: Colors.white,
-                ),
-              ): SizedBox(),
+              starApp
+                  ? IconButton(
+                      onPressed: () {
+                        Navigator.of(context, rootNavigator: true).pushNamed(
+                          Routes.AllMySigns,
+                          arguments: {'name': 'My Favorites', 'appear': false},
+                        );
+                      },
+                      icon: Icon(
+                        Icons.star_border_purple500_outlined,
+                        color: Colors.white,
+                      ),
+                    )
+                  : SizedBox(),
             ],
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 55.0),
-            child: Text(
-              dec,
-              style: TextStyle(color: Colors.white70),
-            ),
+            child: Text(dec, style: TextStyle(color: Colors.white70)),
           ),
           verticalSpace(16.h),
 
           CustomTextField(
+            controller: controller,
             prefixIcon: Icon(Icons.search, color: Colors.white70, size: 25),
             hintText: 'search',
             validator: (value) {},
