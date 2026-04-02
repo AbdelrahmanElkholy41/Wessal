@@ -158,6 +158,7 @@ Widget statCard({
         verticalSpace(10.h),
         Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
         verticalSpace(10.h),
+
         Text(value),
         verticalSpace(10.h),
         LinearProgressIndicator(
