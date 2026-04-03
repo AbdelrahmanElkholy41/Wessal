@@ -20,7 +20,7 @@ class LevelLessonsScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // App bar
-         AppBarFavoritSign(name: level.name, appear: false),
+         AppBarFavoritSign(name: level.name, appear: false, appearDec: false,),
           // Lessons List title
           const Padding(
             padding: EdgeInsets.fromLTRB(20, 24, 20, 16),

@@ -67,7 +67,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
       body: Column(
         children: [
           // App bar
-          AppBarFavoritSign(name: widget.levelName, appear: false),
+          AppBarFavoritSign(name: widget.levelName, appear: false, appearDec: false,),
           Expanded(
             child: SingleChildScrollView(
               padding: const EdgeInsets.fromLTRB(20, 24, 20, 24),

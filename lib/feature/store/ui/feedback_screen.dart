@@ -28,7 +28,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
       backgroundColor: AppColors.background,
       body: Column(
         children: [
-         AppBarFavoritSign(name: 'Did you enjoy this story ?', appear: false,),
+         AppBarFavoritSign(name: 'Did you enjoy this story ?', appear: false, appearDec: false,),
           Expanded(
             child: SingleChildScrollView(
               padding: const EdgeInsets.symmetric(horizontal: 20),

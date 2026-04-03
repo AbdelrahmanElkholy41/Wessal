@@ -16,7 +16,7 @@ class SignDetailsScreen extends StatelessWidget {
       backgroundColor: const Color(0xFFF5F6FB),
       body: Column(
         children: [
-          AppBarFavoritSign(name: sign.title, appear: false,),
+          AppBarFavoritSign(name: sign.title, appear: false, appearDec: false,),
           Expanded(
             child: SingleChildScrollView(
               padding: const EdgeInsets.all(16),

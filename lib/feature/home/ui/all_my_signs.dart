@@ -34,7 +34,7 @@ class AllMySigns extends StatelessWidget {
       ):SizedBox(),
       body: Column(
         children: [
-          AppBarFavoritSign(name: name, appear: true,),
+          AppBarFavoritSign(name: name, appear: true, appearDec: false,),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
